@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="Not specified"
+
+[[mods]]
+modId="crimsonsteveapi"
+version="1.0.0"
+displayName="crimsonSteveAPI"
+displayURL="https://www.youtube.com/@crimsonsteve5607"
+credits="https://www.youtube.com/@crimsonsteve5607"
+authors="CrimsonSteve"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.crimsonsteveapi]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration
