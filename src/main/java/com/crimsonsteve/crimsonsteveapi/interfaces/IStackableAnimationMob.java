@@ -13,4 +13,10 @@ public interface IStackableAnimationMob {
             anim.animate(hierarchicalModel, ageInTicks, partialTicks);
         }
     }
+
+    default void tickAnims(){
+        for (BaseAnimation anim : getAnimList()) {
+            anim.tick();
+        }
+    }
 }
