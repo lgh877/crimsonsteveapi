@@ -23,8 +23,8 @@ public class AnimUtil {
     }
 
     public static void animationBasedYawControl(HierarchicalModel<?> model, AnimationDefinition lookLeft, AnimationDefinition lookRight, float headYaw){
-        if(headYaw > 0) KeyframeAnimations.animate(model, lookRight, 1, headYaw, ANIMATION_VECTOR_CACHE);
-        else if(headYaw != 0) KeyframeAnimations.animate(model, lookLeft, 1, -headYaw, ANIMATION_VECTOR_CACHE);
+        if(headYaw > 0) KeyframeAnimations.animate(model, lookLeft, 1, headYaw, ANIMATION_VECTOR_CACHE);
+        else if(headYaw != 0) KeyframeAnimations.animate(model, lookRight, 1, -headYaw, ANIMATION_VECTOR_CACHE);
     }
 
     public static void animationBasedPitchControl(HierarchicalModel<?> model, AnimationDefinition lookUp, AnimationDefinition lookDown, float headPitch){
