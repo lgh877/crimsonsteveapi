@@ -1,5 +1,5 @@
 package com.crimsonsteve.crimsonsteveapi.layers;
-
+/*
 import com.crimsonsteve.crimsonsteveapi.interfaces.IHierarchicalHeadedModel;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -68,6 +68,7 @@ public class HierarchicalCustomHeadLayer<T extends LivingEntity, M extends Entit
                 poseStack.translate(0.0D, 1.0D, 0.0D);
             }
             */
+/*
             this.getParentModel().translateToHead(poseStack);
             if (item instanceof BlockItem && ((BlockItem) item).getBlock() instanceof AbstractSkullBlock) {
                 float f2 = 1.1875F;
@@ -99,3 +100,4 @@ public class HierarchicalCustomHeadLayer<T extends LivingEntity, M extends Entit
         poseStack.scale(0.625F, -0.625F, -0.625F);
     }
 }
+*/

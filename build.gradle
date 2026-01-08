@@ -1,54 +1,42 @@
 plugins {
+    id 'java-library'
     id 'eclipse'
-    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+    id 'net.neoforged.moddev' version '1.0.21' // 1.21+ 전용 플러그인
 }
 
 version = '1.1'
 group = 'com.yourname.modid'
-archivesBaseName = 'CrimsonSteveApi'
+base {
+    archivesName = 'CrimsonSteveApi'
+}
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
-minecraft {
-    mappings channel: 'official', version: '1.20.1'
-
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
-
-    copyIdeResources = true
+neoForge {
+    version = '21.1.65'
 
     runs {
         client {
-            def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
-            if (mcreatorJvmOptions) {
-                jvmArgs += mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.toList()
-            }
+            client()
         }
 
         server {
+            server()
         }
 
         configureEach {
-            workingDirectory project.file('run')
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+        }
+    }
 
-            property 'forge.logging.markers', 'REGISTRIES'
-            property 'forge.logging.console.level', 'debug'
-
-            mods {
-                examplemod {
-                    source sourceSets.main
-                }
-            }
+    mods {
+        crimsonsteveapi { // ModId로 수정
+            sourceSet sourceSets.main
         }
     }
 }
 
-dependencies {
-    minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
-}
-
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+    options.encoding = 'UTF-8'
 }
-
-apply from: 'mcreator.gradle'
-
