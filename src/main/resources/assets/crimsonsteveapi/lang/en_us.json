@@ -1,0 +1,13 @@
+{
+  "itemGroup.crimsonsteveapi": "Example Mod Tab",
+  "block.crimsonsteveapi.example_block": "Example Block",
+  "item.crimsonsteveapi.example_item": "Example Item",
+
+  "crimsonsteveapi.configuration.title": "CrimsonSteveAPI Configs",
+  "crimsonsteveapi.configuration.section.crimsonsteveapi.common.toml": "CrimsonSteveAPI Configs",
+  "crimsonsteveapi.configuration.section.crimsonsteveapi.common.toml.title": "CrimsonSteveAPI Configs",
+  "crimsonsteveapi.configuration.items": "Item List",
+  "crimsonsteveapi.configuration.logDirtBlock": "Log Dirt Block",
+  "crimsonsteveapi.configuration.magicNumberIntroduction": "Magic Number Text",
+  "crimsonsteveapi.configuration.magicNumber": "Magic Number"
+}
