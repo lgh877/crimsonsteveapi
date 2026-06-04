@@ -1,4 +1,12 @@
-# 프로젝트 제외 경로
-/.gradle/
-/build/
-/build/classes/java/main/
+run/
+.mcreator/
+.idea/
+models/
+build/
+.eclipse/
+.gradle/
+gradle/
+build.gradle
+gradlew
+gradlew.bat
+mcreator.gradle
